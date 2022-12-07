@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "3097dcb2-0810-4f38-bb07-6b10e3d12fe1",
+		"name": "Pagamentos - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pagamento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pagamentos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pagamentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estorno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transacao\": {        \r\n        \"valor\": 1000.0,\r\n        \"numeroCartao\": \"1234\",\r\n        \"estabelecimento\": \"PetShop Mundo cão\",\r\n        \"descricao\": {\r\n            \"codigoAutorizacao:\": \"147258369\",\r\n            \"dataHora:\": \"06/12/2022 22:46:15\",\r\n            \"estabelecimento:\": \"PetShop Mundo cão\",\r\n            \"nsu:\": \"1234567890\",\r\n            \"status:\": \"AUTORIZADO\",\r\n            \"valor:\": \"1000.0\"\r\n        },\r\n        \"status\": \"AUTORIZADO\",\r\n        \"nsu\": \"1234567890\",\r\n        \"codigoAutorizacao\": \"147258369\"\r\n    },\r\n    \"formaPagamento\": {\r\n        \"statusPagamento\": \"AVISTA\",\r\n        \"numeroDeParcelas\": \"10\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pagamentos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pagamentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

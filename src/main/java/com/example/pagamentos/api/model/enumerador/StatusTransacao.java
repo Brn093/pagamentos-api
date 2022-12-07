@@ -2,7 +2,8 @@ package com.example.pagamentos.api.model.enumerador;
 
 public enum StatusTransacao {
 	AUTORIZADO(0, "AUTORIZADO"),
-	NEGADO(1, "NEGADO");
+	CANCELADO(1, "CANCELADO"),
+	NEGADO(2, "NEGADO");
 	
 	private Integer id;
 	private String descricao;
